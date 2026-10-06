@@ -1,380 +1,302 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Divine Fire | Chimeneas y Estufas en Marbella</title>
-  <meta name="description" content="Divine Fire: venta e instalación de chimeneas y estufas en Marbella, San Pedro Alcántara y Costa del Sol.">
+  <title>Divine Fire | Fireplaces & Stoves on the Costa del Sol</title>
+  <meta name="description" content="Divine Fire — fireplace and stove sales and professional installation across the Costa del Sol. Wood, pellet, electric, ethanol and gas solutions.">
+  <meta name="theme-color" content="#11100e">
 
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WZSKW8CK2J"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WZSKW8CK2J"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WZSKW8CK2J');
+  </script>
 
-  gtag('config', 'G-WZSKW8CK2J');
-</script>
   <style>
-    :root {
-      --bg: #f5f1eb;
-      --dark: #1d1a17;
-      --brown: #6f4e37;
-      --brown-dark: #4b3425;
-      --cream: #fffaf4;
-      --muted: #6f6861;
-      --line: #e5ddd3;
+    :root{
+      --ink:#171513;
+      --muted:#6e675f;
+      --cream:#f7f3ed;
+      --paper:#fffdf9;
+      --line:#e6ded3;
+      --gold:#b8843b;
+      --gold-dark:#8d6429;
+      --fire:#df6c22;
+      --shadow:0 18px 50px rgba(30,20,10,.10);
+      --radius:20px;
     }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--bg);
-      color: var(--dark);
-      line-height: 1.6;
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+    a{color:inherit}
+    img{max-width:100%;display:block}
+    .container{width:min(1160px,92%);margin:auto}
+    .topbar{background:#171513;color:#fff;padding:9px 0;font-size:13px}
+    .topbar .container{display:flex;justify-content:space-between;gap:18px;align-items:center}
+    .topbar a{text-decoration:none}
+    header{position:sticky;top:0;z-index:50;background:rgba(255,253,249,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(230,222,211,.85)}
+    nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:700;letter-spacing:.04em}
+    .brand img{width:52px;height:52px;object-fit:contain}
+    .brand span{font-family:Georgia,serif;font-size:20px}
+    .navlinks{display:flex;gap:24px;font-size:14px}
+    .navlinks a{text-decoration:none;color:#4c4741}
+    .navlinks a:hover{color:var(--gold-dark)}
+    .navcta{background:var(--ink);color:white;padding:12px 18px;border-radius:999px;text-decoration:none;font-size:14px;font-weight:700}
+    .hero{min-height:690px;display:grid;align-items:end;background:
+      linear-gradient(90deg,rgba(12,10,8,.76) 0%,rgba(12,10,8,.38) 45%,rgba(12,10,8,.08) 100%),
+      url("images/project-01-electric-fireplace.jpg") center/cover no-repeat;
     }
-
-    a { color: inherit; text-decoration: none; }
-
-    .container {
-      width: min(1120px, 92%);
-      margin: 0 auto;
+    .hero-content{padding:100px 0 92px;color:#fff;max-width:690px}
+    .eyebrow{letter-spacing:.18em;text-transform:uppercase;font-size:12px;font-weight:700;color:#e8c28d;margin-bottom:16px}
+    h1{font-family:Georgia,serif;font-size:clamp(42px,6vw,74px);line-height:1.03;margin:0 0 20px;font-weight:500}
+    .hero p{font-size:20px;max-width:610px;color:#f4eee7;margin:0 0 30px}
+    .buttons{display:flex;flex-wrap:wrap;gap:12px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 21px;border-radius:999px;text-decoration:none;font-weight:700;font-size:14px}
+    .btn-primary{background:#fff;color:#171513}
+    .btn-gold{background:var(--gold);color:#fff}
+    .btn-outline{border:1px solid rgba(255,255,255,.55);color:#fff}
+    section{padding:90px 0}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:38px}
+    .section-head h2{font-family:Georgia,serif;font-size:42px;line-height:1.1;margin:0;font-weight:500}
+    .section-head p{max-width:560px;color:var(--muted);margin:0}
+    .intro{background:var(--cream)}
+    .intro-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:55px;align-items:center}
+    .intro-copy h2{font-family:Georgia,serif;font-size:46px;font-weight:500;line-height:1.1;margin:0 0 20px}
+    .intro-copy p{color:var(--muted);font-size:17px}
+    .facts{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .fact{background:#fff;border:1px solid var(--line);padding:22px;border-radius:16px}
+    .fact strong{display:block;font-family:Georgia,serif;font-size:20px;margin-bottom:4px}
+    .fact span{font-size:13px;color:var(--muted)}
+    .products{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+    .product{border:1px solid var(--line);border-radius:18px;padding:26px 18px;background:#fff;min-height:175px}
+    .product .icon{
+      width:44px;height:44px;border:1px solid var(--gold);
+      border-radius:50%;display:flex;align-items:center;justify-content:center;
+      color:var(--gold-dark);font-family:Georgia,serif;font-size:18px;
+      font-weight:700;letter-spacing:.03em;margin-bottom:18px;
     }
-
-    header {
-      background: var(--dark);
-      color: white;
-      padding: 22px 0;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      box-shadow: 0 3px 18px rgba(0,0,0,.12);
+    .product h3{font-family:Georgia,serif;font-size:20px;margin:0 0 8px}
+    .product p{font-size:13px;color:var(--muted);margin:0}
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .gallery figure{margin:0;position:relative;overflow:hidden;border-radius:18px;background:#eee;aspect-ratio:1/1.02}
+    .gallery img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+    .gallery figure:hover img{transform:scale(1.04)}
+    .gallery figcaption{position:absolute;left:12px;right:12px;bottom:12px;background:rgba(20,17,14,.78);color:white;border-radius:12px;padding:9px 12px;font-size:12px;backdrop-filter:blur(5px)}
+    .process{background:var(--cream)}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .step{padding:28px;background:#fff;border:1px solid var(--line);border-radius:18px}
+    .number{font-family:Georgia,serif;font-size:34px;color:var(--gold);margin-bottom:10px}
+    .step h3{margin:0 0 8px;font-family:Georgia,serif;font-size:22px}
+    .step p{margin:0;color:var(--muted);font-size:14px}
+    .cta{background:#1b1815;color:#fff}
+    .cta-box{display:grid;grid-template-columns:1fr auto;align-items:center;gap:30px}
+    .cta h2{font-family:Georgia,serif;font-size:44px;line-height:1.1;font-weight:500;margin:0 0 12px}
+    .cta p{color:#d7cec3;margin:0}
+    .contact{background:var(--paper)}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+    .contact-card{border:1px solid var(--line);border-radius:20px;padding:30px;background:#fff}
+    .contact-card h3{font-family:Georgia,serif;font-size:28px;font-weight:500;margin:0 0 18px}
+    .contact-row{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--line)}
+    .contact-row:last-child{border-bottom:0}
+    .contact-row b{min-width:85px}
+    .contact-row a{text-decoration:none;color:var(--gold-dark);font-weight:700}
+    .social{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+    .social a{border:1px solid var(--line);padding:10px 14px;border-radius:999px;text-decoration:none;font-weight:700;font-size:13px}
+    footer{background:#11100e;color:#d8d0c7;padding:30px 0;font-size:13px}
+    footer .container{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    .small{font-size:12px;color:#8f877e}
+    @media(max-width:900px){
+      .navlinks{display:none}
+      .hero{min-height:610px}
+      .products{grid-template-columns:repeat(2,1fr)}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+      .intro-grid,.contact-grid,.cta-box{grid-template-columns:1fr}
+      .steps{grid-template-columns:1fr}
     }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 25px;
-    }
-
-    .brand {
-      font-size: 1.25rem;
-      font-weight: 800;
-      letter-spacing: 3px;
-    }
-
-    .brand span {
-      display: block;
-      font-size: .68rem;
-      font-weight: 400;
-      letter-spacing: 2px;
-      color: #d7c2ae;
-      margin-top: 2px;
-    }
-
-    nav {
-      display: flex;
-      gap: 24px;
-      font-size: .92rem;
-    }
-
-    nav a:hover { color: #d7b99d; }
-
-    .hero {
-      min-height: 600px;
-      display: flex;
-      align-items: center;
-      background:
-        linear-gradient(115deg, rgba(29,26,23,.96), rgba(29,26,23,.70)),
-        radial-gradient(circle at 80% 30%, #9a6a43 0, #4d382a 35%, #1d1a17 72%);
-      color: white;
-    }
-
-    .hero-content {
-      max-width: 720px;
-      padding: 85px 0;
-    }
-
-    .eyebrow {
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      font-size: .78rem;
-      color: #d7b99d;
-      margin-bottom: 18px;
-      font-weight: 700;
-    }
-
-    .hero h1 {
-      font-size: clamp(3rem, 7vw, 5.8rem);
-      line-height: .95;
-      letter-spacing: -2px;
-      margin-bottom: 24px;
-    }
-
-    .hero h1 span { color: #d7b99d; }
-
-    .hero p {
-      max-width: 620px;
-      color: #eee6df;
-      font-size: 1.15rem;
-      margin-bottom: 32px;
-    }
-
-    .buttons {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 14px 24px;
-      border-radius: 5px;
-      font-weight: 700;
-      transition: transform .2s, opacity .2s;
-    }
-
-    .btn:hover { transform: translateY(-2px); opacity: .92; }
-
-    .btn-primary {
-      background: #d7b99d;
-      color: var(--dark);
-    }
-
-    .btn-secondary {
-      border: 1px solid rgba(255,255,255,.35);
-      color: white;
-    }
-
-    section { padding: 80px 0; }
-
-    .section-heading {
-      max-width: 700px;
-      margin-bottom: 38px;
-    }
-
-    .section-heading .eyebrow {
-      color: var(--brown);
-      margin-bottom: 10px;
-    }
-
-    h2 {
-      font-size: clamp(2rem, 4vw, 3rem);
-      line-height: 1.1;
-      margin-bottom: 14px;
-    }
-
-    .intro { color: var(--muted); font-size: 1.05rem; }
-
-    .products {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 16px;
-    }
-
-    .card {
-      background: var(--cream);
-      border: 1px solid var(--line);
-      padding: 26px 20px;
-      min-height: 170px;
-      border-radius: 8px;
-      box-shadow: 0 8px 25px rgba(65,45,30,.05);
-    }
-
-    .card-number {
-      color: var(--brown);
-      font-weight: 800;
-      font-size: .8rem;
-      letter-spacing: 2px;
-      margin-bottom: 30px;
-    }
-
-    .card h3 { font-size: 1.05rem; margin-bottom: 8px; }
-
-    .card p { color: var(--muted); font-size: .9rem; }
-
-    .services {
-      background: var(--dark);
-      color: white;
-    }
-
-    .service-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 55px;
-      align-items: center;
-    }
-
-    .services .eyebrow { color: #d7b99d; }
-
-    .services p { color: #ddd5ce; font-size: 1.05rem; }
-
-    .service-list {
-      display: grid;
-      gap: 12px;
-    }
-
-    .service-list div {
-      padding: 17px 20px;
-      border: 1px solid rgba(255,255,255,.16);
-      border-radius: 5px;
-      background: rgba(255,255,255,.04);
-    }
-
-    .contact {
-      background: var(--cream);
-      text-align: center;
-    }
-
-    .contact-box {
-      max-width: 760px;
-      margin: 0 auto;
-    }
-
-    .contact-box p {
-      color: var(--muted);
-      margin-bottom: 26px;
-      font-size: 1.05rem;
-    }
-
-    .location {
-      margin-top: 25px;
-      font-size: .9rem;
-      color: var(--muted);
-    }
-
-    footer {
-      background: #12110f;
-      color: #bdb5ae;
-      text-align: center;
-      padding: 28px 0;
-      font-size: .85rem;
-    }
-
-    @media (max-width: 850px) {
-      .products { grid-template-columns: repeat(2, 1fr); }
-      .service-grid { grid-template-columns: 1fr; gap: 30px; }
-    }
-
-    @media (max-width: 600px) {
-      nav { display: none; }
-      .hero { min-height: 520px; }
-      .products { grid-template-columns: 1fr; }
-      section { padding: 60px 0; }
-      .hero h1 { letter-spacing: -1px; }
+    @media(max-width:560px){
+      .topbar .container{justify-content:center;text-align:center}
+      .topbar .container span:first-child{display:none}
+      nav{height:66px}
+      .brand img{width:44px;height:44px}
+      .brand span{font-size:17px}
+      .hero-content{padding:80px 0 70px}
+      .hero p{font-size:17px}
+      section{padding:65px 0}
+      .section-head{display:block}
+      .section-head h2,.intro-copy h2,.cta h2{font-size:35px;margin-bottom:14px}
+      .products,.gallery{grid-template-columns:1fr}
+      .gallery figure{aspect-ratio:1/1.08}
+      .facts{grid-template-columns:1fr}
     }
   </style>
 </head>
 
 <body>
+  <div class="topbar">
+    <div class="container">
+      <span>Fireplaces & Stoves · Professional Installation · Costa del Sol</span>
+      <span><a href="tel:+34643558792">EN +34 643 558 792</a> &nbsp;·&nbsp; <a href="tel:+34643795921">ES +34 643 795 921</a></span>
+    </div>
+  </div>
+
   <header>
-    <div class="container nav">
-      <a class="brand" href="#">DIVINE FIRE<span>FIREPLACES &amp; STOVES</span></a>
+    <div class="container">
       <nav>
-        <a href="#productos">Productos</a>
-        <a href="#instalacion">Instalación</a>
-        <a href="#contacto">Contacto</a>
+        <a class="brand" href="#top">
+          <img src="images/divine-fire-logo.png" alt="Divine Fire logo">
+          <span>DIVINE FIRE</span>
+        </a>
+        <div class="navlinks">
+          <a href="#services">Services</a>
+          <a href="#projects">Projects</a>
+          <a href="#process">How it works</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <a class="navcta" href="https://wa.me/34643558792?text=Hello%20Divine%20Fire%2C%20I%27d%20like%20to%20request%20a%20quote.">Request a quote</a>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main id="top">
     <section class="hero">
-      <div class="container hero-content">
-        <div class="eyebrow">Fireplaces · Stoves · Installation · Costa del Sol</div>
-        <h1>Calor que transforma <span>tu hogar.</span></h1>
-        <p>
-          Venta e instalación profesional de chimeneas y estufas para viviendas
-          en Marbella, San Pedro Alcántara y la Costa del Sol.
-        </p>
-        <div class="buttons">
-          <a class="btn btn-primary" href="#contacto">Solicitar presupuesto</a>
-          <a class="btn btn-secondary" href="#productos">Ver productos</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="productos">
       <div class="container">
-        <div class="section-heading">
-          <div class="eyebrow">Nuestro showroom</div>
-          <h2>Soluciones para cada espacio</h2>
-          <p class="intro">
-            Una selección de sistemas de calefacción y decoración para crear
-            ambientes cálidos, elegantes y adaptados a cada vivienda.
-          </p>
+        <div class="hero-content">
+          <div class="eyebrow">Divine Fire · Costa del Sol</div>
+          <h1>Fireplaces that transform your home.</h1>
+          <p>Fireplace and stove sales, bespoke solutions and professional installation across the Costa del Sol.</p>
+          <div class="buttons">
+            <a class="btn btn-primary" href="https://wa.me/34643558792?text=Hello%20Divine%20Fire%2C%20I%27d%20like%20to%20request%20a%20quote.">WhatsApp · English</a>
+            <a class="btn btn-gold" href="https://wa.me/34643795921?text=Hola%20Divine%20Fire%2C%20me%20gustar%C3%ADa%20solicitar%20un%20presupuesto.">WhatsApp · Español</a>
+            <a class="btn btn-outline" href="#projects">View our projects</a>
+          </div>
         </div>
+      </div>
+    </section>
 
+    <section class="intro">
+      <div class="container intro-grid">
+        <div class="intro-copy">
+          <div class="eyebrow" style="color:var(--gold-dark)">About Divine Fire</div>
+          <h2>From the first idea to the finished fireplace.</h2>
+          <p>We supply and install fireplace and stove solutions designed around your home, your style and your needs. From modern electric fireplaces to traditional wood-burning installations, we take care of the project from consultation to installation.</p>
+          <p><strong>Trabajamos en toda la Costa del Sol.</strong> · We cover the Costa del Sol.</p>
+        </div>
+        <div class="facts">
+          <div class="fact"><strong>Wood</strong><span>Leña · Inserts & fireplaces</span></div>
+          <div class="fact"><strong>Pellet</strong><span>Estufas · Efficient heating</span></div>
+          <div class="fact"><strong>Electric</strong><span>Modern · Easy to use</span></div>
+          <div class="fact"><strong>Gas</strong><span>Contemporary fireplace solutions</span></div>
+          <div class="fact"><strong>Ethanol</strong><span>Bioethanol · Decorative fire</span></div>
+          <div class="fact"><strong>Installation</strong><span>Professional fitting</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-head">
+          <h2>Our solutions</h2>
+          <p>Choose the type of fireplace that suits your space. We can advise you on the most suitable option for your project.</p>
+        </div>
         <div class="products">
-          <article class="card">
-            <div class="card-number">01</div>
-            <h3>Leña</h3>
-            <p>Chimeneas tradicionales y soluciones de diseño.</p>
-          </article>
-          <article class="card">
-            <div class="card-number">02</div>
-            <h3>Pellet</h3>
-            <p>Estufas eficientes para un calor confortable.</p>
-          </article>
-          <article class="card">
-            <div class="card-number">03</div>
-            <h3>Eléctricas</h3>
-            <p>Diseño moderno, práctico y sin necesidad de obra compleja.</p>
-          </article>
-          <article class="card">
-            <div class="card-number">04</div>
-            <h3>Gas</h3>
-            <p>Confort y estética para interiores contemporáneos.</p>
-          </article>
-          <article class="card">
-            <div class="card-number">05</div>
-            <h3>Bioetanol</h3>
-            <p>Fuego decorativo para espacios modernos.</p>
-          </article>
+          <div class="product"><div class="icon icon-wood">W</div><h3>Wood</h3><p>Traditional warmth, inserts and built-in fireplaces.</p></div>
+          <div class="product"><div class="icon icon-pellet">P</div><h3>Pellet</h3><p>Pellet stoves for practical everyday heating.</p></div>
+          <div class="product"><div class="icon icon-electric">E</div><h3>Electric</h3><p>Modern flame effects for contemporary interiors.</p></div>
+          <div class="product"><div class="icon icon-gas">G</div><h3>Gas</h3><p>Elegant fireplace solutions with a clean look.</p></div>
+          <div class="product"><div class="icon icon-ethanol">E</div><h3>Ethanol</h3><p>Flexible decorative fire without a traditional chimney.</p></div>
         </div>
       </div>
     </section>
 
-    <section class="services" id="instalacion">
-      <div class="container service-grid">
+    <section id="projects" style="background:var(--cream)">
+      <div class="container">
+        <div class="section-head">
+          <h2>Our projects</h2>
+          <p>Real installations by Divine Fire. Every home is different, so every fireplace project is planned around the space.</p>
+        </div>
+        <div class="gallery">
+          <figure><img src="images/project-01-electric-fireplace.jpg" alt="Modern built-in electric fireplace installation"><figcaption>Modern built-in electric fireplace</figcaption></figure>
+          <figure><img src="images/project-02-modern-fireplace.jpg" alt="Contemporary built-in fireplace"><figcaption>Contemporary fireplace installation</figcaption></figure>
+          <figure><img src="images/project-03-wood-fireplace.jpg" alt="Wood-burning fireplace installation"><figcaption>Wood-burning fireplace</figcaption></figure>
+          <figure><img src="images/project-04-fire-insert.jpg" alt="Fireplace insert installation"><figcaption>Fireplace insert</figcaption></figure>
+          <figure><img src="images/project-05-fireplace-installation.jpg" alt="Traditional fireplace renovation"><figcaption>Traditional fireplace renovation</figcaption></figure>
+          <figure><img src="images/project-06-modern-insert.jpg" alt="Modern fireplace insert with brick surround"><figcaption>Modern insert installation</figcaption></figure>
+          <figure><img src="images/project-07-pellet-stove.jpg" alt="Pellet stove installation"><figcaption>Pellet stove installation</figcaption></figure>
+          <figure><img src="images/project-08-traditional-fireplace.jpg" alt="Traditional fireplace with wood fire"><figcaption>Traditional wood fireplace</figcaption></figure>
+          <figure><img src="images/project-09-wood-fireplace.jpg" alt="Built-in wood fireplace with brick surround"><figcaption>Built-in wood fireplace</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="process">
+      <div class="container">
+        <div class="section-head">
+          <h2>How it works</h2>
+          <p>Un proceso sencillo para empezar tu proyecto.</p>
+        </div>
+        <div class="steps">
+          <div class="step"><div class="number">01</div><h3>Tell us about your project</h3><p>Send us photos, measurements or simply tell us what you have in mind.</p></div>
+          <div class="step"><div class="number">02</div><h3>We advise & quote</h3><p>We help you choose the right solution and prepare a tailored quotation.</p></div>
+          <div class="step"><div class="number">03</div><h3>Professional installation</h3><p>Once approved, we coordinate the installation and finish the project with care.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container cta-box">
         <div>
-          <div class="eyebrow">Servicio profesional</div>
-          <h2>Del proyecto a la instalación.</h2>
-          <p>
-            Te ayudamos a elegir la solución adecuada y nos encargamos de la
-            instalación para que el resultado quede integrado en tu vivienda.
-          </p>
+          <h2>Thinking about a new fireplace?</h2>
+          <p>¿Tienes un proyecto? Envíanos fotos de tu espacio y cuéntanos qué necesitas.</p>
         </div>
-
-        <div class="service-list">
-          <div>✓ Asesoramiento y elección del equipo</div>
-          <div>✓ Instalación profesional</div>
-          <div>✓ Soluciones adaptadas a cada vivienda</div>
-          <div>✓ Mantenimiento y limpieza</div>
+        <div class="buttons">
+          <a class="btn btn-gold" href="https://wa.me/34643795921?text=Hola%20Divine%20Fire%2C%20quiero%20informaci%C3%B3n%20sobre%20una%20chimenea.">WhatsApp · Español</a>
+          <a class="btn btn-primary" href="https://wa.me/34643558792?text=Hello%20Divine%20Fire%2C%20I%20would%20like%20information%20about%20a%20fireplace.">WhatsApp · English</a>
         </div>
       </div>
     </section>
 
-    <section class="contact" id="contacto">
-      <div class="container contact-box">
-        <div class="eyebrow">Hablemos de tu proyecto</div>
-        <h2>¿Tienes una idea para tu hogar?</h2>
-        <p>
-          Cuéntanos qué espacio quieres transformar y te ayudaremos a encontrar
-          la chimenea o estufa que mejor encaje contigo.
-        </p>
-        <a class="btn btn-primary" href="#productos">Ver soluciones</a>
-        <div class="location">Marbella · San Pedro Alcántara · Costa del Sol</div>
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-head">
+          <h2>Contact Divine Fire</h2>
+          <p>We work across the Costa del Sol. Get in touch and tell us about your project.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>Request a quote</h3>
+            <div class="contact-row"><b>Español</b><a href="tel:+34643795921">+34 643 795 921</a></div>
+            <div class="contact-row"><b>English</b><a href="tel:+34643558792">+34 643 558 792</a></div>
+            <div class="contact-row"><b>Email</b><a href="mailto:ventas@divinefires.com">ventas@divinefires.com</a></div>
+            <div class="contact-row"><b>Area</b><span>Costa del Sol · Málaga</span></div>
+            <div class="social">
+              <a href="https://www.instagram.com/divinefiresanpedro/" target="_blank" rel="noopener">Instagram</a>
+              <a href="mailto:ventas@divinefires.com">Email us</a>
+            </div>
+          </div>
+          <div class="contact-card">
+            <h3>Send us your idea</h3>
+            <p style="color:var(--muted)">The easiest way to start is to send us a WhatsApp with a few photos of the room, your location and what type of fireplace you are considering.</p>
+            <div class="buttons" style="margin-top:22px">
+              <a class="btn btn-gold" href="https://wa.me/34643558792?text=Hello%20Divine%20Fire%2C%20I%27d%20like%20to%20request%20a%20quote.%20I%20can%20send%20photos%20of%20the%20space.">Start on WhatsApp</a>
+              <a class="btn" style="border:1px solid var(--line)" href="mailto:ventas@divinefires.com?subject=Fireplace%20project%20enquiry">Send an email</a>
+            </div>
+            <p class="small" style="margin-top:20px">Divine Fire · Fireplace Installation · Costa del Sol</p>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container">© 2026 Divine Fire · Fireplaces &amp; Stoves · Costa del Sol</div>
+    <div class="container">
+      <div>© 2026 Divine Fire · Fireplaces & Stoves · Costa del Sol</div>
+      <div class="small">Website improved with digital analytics in mind.</div>
+    </div>
   </footer>
 </body>
 </html>
