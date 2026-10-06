@@ -4,57 +4,372 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Divine Fire | Chimeneas y Estufas en Marbella</title>
-  <meta name="description" content="Divine Fire: venta e instalación de chimeneas y estufas en Marbella y Costa del Sol.">
+  <meta name="description" content="Divine Fire: venta e instalación de chimeneas y estufas en Marbella, San Pedro Alcántara y Costa del Sol.">
 
   <!-- GOOGLE ANALYTICS 4: aquí colocaremos el código real cuando tengamos el ID G-XXXXXXXXXX -->
   <!-- GA4_START -->
   <!-- GA4_END -->
+
+  <style>
+    :root {
+      --bg: #f5f1eb;
+      --dark: #1d1a17;
+      --brown: #6f4e37;
+      --brown-dark: #4b3425;
+      --cream: #fffaf4;
+      --muted: #6f6861;
+      --line: #e5ddd3;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      background: var(--dark);
+      color: white;
+      padding: 22px 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 3px 18px rgba(0,0,0,.12);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .brand {
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: 3px;
+    }
+
+    .brand span {
+      display: block;
+      font-size: .68rem;
+      font-weight: 400;
+      letter-spacing: 2px;
+      color: #d7c2ae;
+      margin-top: 2px;
+    }
+
+    nav {
+      display: flex;
+      gap: 24px;
+      font-size: .92rem;
+    }
+
+    nav a:hover { color: #d7b99d; }
+
+    .hero {
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(115deg, rgba(29,26,23,.96), rgba(29,26,23,.70)),
+        radial-gradient(circle at 80% 30%, #9a6a43 0, #4d382a 35%, #1d1a17 72%);
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 720px;
+      padding: 85px 0;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: .78rem;
+      color: #d7b99d;
+      margin-bottom: 18px;
+      font-weight: 700;
+    }
+
+    .hero h1 {
+      font-size: clamp(3rem, 7vw, 5.8rem);
+      line-height: .95;
+      letter-spacing: -2px;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 span { color: #d7b99d; }
+
+    .hero p {
+      max-width: 620px;
+      color: #eee6df;
+      font-size: 1.15rem;
+      margin-bottom: 32px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 24px;
+      border-radius: 5px;
+      font-weight: 700;
+      transition: transform .2s, opacity .2s;
+    }
+
+    .btn:hover { transform: translateY(-2px); opacity: .92; }
+
+    .btn-primary {
+      background: #d7b99d;
+      color: var(--dark);
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(255,255,255,.35);
+      color: white;
+    }
+
+    section { padding: 80px 0; }
+
+    .section-heading {
+      max-width: 700px;
+      margin-bottom: 38px;
+    }
+
+    .section-heading .eyebrow {
+      color: var(--brown);
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.1;
+      margin-bottom: 14px;
+    }
+
+    .intro { color: var(--muted); font-size: 1.05rem; }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+    }
+
+    .card {
+      background: var(--cream);
+      border: 1px solid var(--line);
+      padding: 26px 20px;
+      min-height: 170px;
+      border-radius: 8px;
+      box-shadow: 0 8px 25px rgba(65,45,30,.05);
+    }
+
+    .card-number {
+      color: var(--brown);
+      font-weight: 800;
+      font-size: .8rem;
+      letter-spacing: 2px;
+      margin-bottom: 30px;
+    }
+
+    .card h3 { font-size: 1.05rem; margin-bottom: 8px; }
+
+    .card p { color: var(--muted); font-size: .9rem; }
+
+    .services {
+      background: var(--dark);
+      color: white;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .services .eyebrow { color: #d7b99d; }
+
+    .services p { color: #ddd5ce; font-size: 1.05rem; }
+
+    .service-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .service-list div {
+      padding: 17px 20px;
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 5px;
+      background: rgba(255,255,255,.04);
+    }
+
+    .contact {
+      background: var(--cream);
+      text-align: center;
+    }
+
+    .contact-box {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .contact-box p {
+      color: var(--muted);
+      margin-bottom: 26px;
+      font-size: 1.05rem;
+    }
+
+    .location {
+      margin-top: 25px;
+      font-size: .9rem;
+      color: var(--muted);
+    }
+
+    footer {
+      background: #12110f;
+      color: #bdb5ae;
+      text-align: center;
+      padding: 28px 0;
+      font-size: .85rem;
+    }
+
+    @media (max-width: 850px) {
+      .products { grid-template-columns: repeat(2, 1fr); }
+      .service-grid { grid-template-columns: 1fr; gap: 30px; }
+    }
+
+    @media (max-width: 600px) {
+      nav { display: none; }
+      .hero { min-height: 520px; }
+      .products { grid-template-columns: 1fr; }
+      section { padding: 60px 0; }
+      .hero h1 { letter-spacing: -1px; }
+    }
+  </style>
 </head>
 
 <body>
   <header>
-    <h1>DIVINE FIRE</h1>
-    <p>Fireplaces & Stoves · Installation · Costa del Sol</p>
+    <div class="container nav">
+      <a class="brand" href="#">DIVINE FIRE<span>FIREPLACES &amp; STOVES</span></a>
+      <nav>
+        <a href="#productos">Productos</a>
+        <a href="#instalacion">Instalación</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <section>
-      <h2>Chimeneas y estufas para tu hogar</h2>
-      <p>
-        Venta e instalación de chimeneas y estufas en Marbella, San Pedro Alcántara
-        y Costa del Sol.
-      </p>
-      <a href="https://wa.me/" aria-label="Contactar por WhatsApp">Solicitar presupuesto</a>
+    <section class="hero">
+      <div class="container hero-content">
+        <div class="eyebrow">Fireplaces · Stoves · Installation · Costa del Sol</div>
+        <h1>Calor que transforma <span>tu hogar.</span></h1>
+        <p>
+          Venta e instalación profesional de chimeneas y estufas para viviendas
+          en Marbella, San Pedro Alcántara y la Costa del Sol.
+        </p>
+        <div class="buttons">
+          <a class="btn btn-primary" href="#contacto">Solicitar presupuesto</a>
+          <a class="btn btn-secondary" href="#productos">Ver productos</a>
+        </div>
+      </div>
     </section>
 
-    <section>
-      <h2>Nuestros productos</h2>
-      <ul>
-        <li>Chimeneas de leña</li>
-        <li>Estufas de pellet</li>
-        <li>Chimeneas eléctricas</li>
-        <li>Chimeneas de gas</li>
-        <li>Chimeneas de bioetanol</li>
-      </ul>
+    <section id="productos">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">Nuestro showroom</div>
+          <h2>Soluciones para cada espacio</h2>
+          <p class="intro">
+            Una selección de sistemas de calefacción y decoración para crear
+            ambientes cálidos, elegantes y adaptados a cada vivienda.
+          </p>
+        </div>
+
+        <div class="products">
+          <article class="card">
+            <div class="card-number">01</div>
+            <h3>Leña</h3>
+            <p>Chimeneas tradicionales y soluciones de diseño.</p>
+          </article>
+          <article class="card">
+            <div class="card-number">02</div>
+            <h3>Pellet</h3>
+            <p>Estufas eficientes para un calor confortable.</p>
+          </article>
+          <article class="card">
+            <div class="card-number">03</div>
+            <h3>Eléctricas</h3>
+            <p>Diseño moderno, práctico y sin necesidad de obra compleja.</p>
+          </article>
+          <article class="card">
+            <div class="card-number">04</div>
+            <h3>Gas</h3>
+            <p>Confort y estética para interiores contemporáneos.</p>
+          </article>
+          <article class="card">
+            <div class="card-number">05</div>
+            <h3>Bioetanol</h3>
+            <p>Fuego decorativo para espacios modernos.</p>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <section>
-      <h2>Instalación profesional</h2>
-      <p>
-        Diseñamos e instalamos soluciones de calefacción y decoración adaptadas
-        a cada vivienda.
-      </p>
+    <section class="services" id="instalacion">
+      <div class="container service-grid">
+        <div>
+          <div class="eyebrow">Servicio profesional</div>
+          <h2>Del proyecto a la instalación.</h2>
+          <p>
+            Te ayudamos a elegir la solución adecuada y nos encargamos de la
+            instalación para que el resultado quede integrado en tu vivienda.
+          </p>
+        </div>
+
+        <div class="service-list">
+          <div>✓ Asesoramiento y elección del equipo</div>
+          <div>✓ Instalación profesional</div>
+          <div>✓ Soluciones adaptadas a cada vivienda</div>
+          <div>✓ Mantenimiento y limpieza</div>
+        </div>
+      </div>
     </section>
 
-    <section>
-      <h2>Contacto</h2>
-      <p>Marbella · San Pedro Alcántara · Costa del Sol</p>
-      <p>Solicita información y presupuesto sin compromiso.</p>
+    <section class="contact" id="contacto">
+      <div class="container contact-box">
+        <div class="eyebrow">Hablemos de tu proyecto</div>
+        <h2>¿Tienes una idea para tu hogar?</h2>
+        <p>
+          Cuéntanos qué espacio quieres transformar y te ayudaremos a encontrar
+          la chimenea o estufa que mejor encaje contigo.
+        </p>
+        <a class="btn btn-primary" href="#productos">Ver soluciones</a>
+        <div class="location">Marbella · San Pedro Alcántara · Costa del Sol</div>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>© 2026 Divine Fire</p>
+    <div class="container">© 2026 Divine Fire · Fireplaces &amp; Stoves · Costa del Sol</div>
   </footer>
 </body>
 </html>
